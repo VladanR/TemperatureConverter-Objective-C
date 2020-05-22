@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,103 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Teperature Converter" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XkI-v8-pXR">
+                                <rect key="frame" x="20" y="43.999999999999986" width="335" height="173.66666666666663"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="XkI-v8-pXR" secondAttribute="height" multiplier="187:97" id="RKi-ls-3yB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Fahrenheit Temperature" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tOQ-7P-3vq">
+                                <rect key="frame" x="20" y="225.66666666666663" width="335" height="71"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="71" id="Wv8-8b-Jzo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 Celsius" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bfn-gW-A9G">
+                                <rect key="frame" x="20" y="661" width="335" height="78"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="78" id="PCh-Im-dVP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Hrt-KO-Azz">
+                                <rect key="frame" x="20" y="747" width="335" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="zyA-Rq-jJp"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Convert to C"/>
+                                    <segment title="Convert to F"/>
+                                </segments>
+                                <color key="selectedSegmentTintColor" red="0.23921568630000001" green="0.69411764710000001" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="switchConvert:" destination="BYZ-38-t0r" eventType="valueChanged" id="viF-2z-kMO"/>
+                                </connections>
+                            </segmentedControl>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Temp1" translatesAutoresizingMaskIntoConstraints="NO" id="Mhk-dT-xVc">
+                                <rect key="frame" x="20" y="346.66666666666674" width="335" height="306.33333333333326"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lNM-VO-Nju">
+                                <rect key="frame" x="20" y="304.66666666666669" width="335" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="9Zk-85-tUG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <action selector="convert:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="qiK-Rb-V8c"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Hrt-KO-Azz" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="2HE-dX-upv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Mhk-dT-xVc" secondAttribute="trailing" constant="20" id="2ot-JZ-fqX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XkI-v8-pXR" secondAttribute="trailing" constant="20" id="486-nV-ZOd"/>
+                            <constraint firstItem="Mhk-dT-xVc" firstAttribute="top" secondItem="lNM-VO-Nju" secondAttribute="bottom" constant="8" id="7IJ-9W-XWM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tOQ-7P-3vq" secondAttribute="trailing" constant="20" id="Br8-o9-CGw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Bfn-gW-A9G" secondAttribute="trailing" constant="20" id="H9O-sa-yGs"/>
+                            <constraint firstItem="Bfn-gW-A9G" firstAttribute="top" secondItem="Mhk-dT-xVc" secondAttribute="bottom" constant="8" id="Im2-WS-a94"/>
+                            <constraint firstItem="XkI-v8-pXR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="IuU-jb-bqy"/>
+                            <constraint firstItem="lNM-VO-Nju" firstAttribute="top" secondItem="tOQ-7P-3vq" secondAttribute="bottom" constant="8" id="KYd-Dw-pT7"/>
+                            <constraint firstItem="tOQ-7P-3vq" firstAttribute="top" secondItem="XkI-v8-pXR" secondAttribute="bottom" constant="8" id="KmQ-CM-xTP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lNM-VO-Nju" secondAttribute="trailing" constant="20" id="RqB-rC-PTR"/>
+                            <constraint firstItem="lNM-VO-Nju" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="SKi-TO-w5J"/>
+                            <constraint firstItem="XkI-v8-pXR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Y8s-d6-OYs"/>
+                            <constraint firstItem="tOQ-7P-3vq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="bvr-oh-MMk"/>
+                            <constraint firstItem="Mhk-dT-xVc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="lDX-5d-xsk"/>
+                            <constraint firstItem="Hrt-KO-Azz" firstAttribute="top" secondItem="Bfn-gW-A9G" secondAttribute="bottom" constant="8" id="mZv-eg-vvk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Hrt-KO-Azz" secondAttribute="trailing" constant="20" id="nEt-g2-XP5"/>
+                            <constraint firstItem="Bfn-gW-A9G" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="o3d-Pq-FIu"/>
+                            <constraint firstItem="Hrt-KO-Azz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="tlI-1A-oLU"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="switchConversion" destination="Hrt-KO-Azz" id="HBr-Tl-ScV"/>
+                        <outlet property="temperatureImage" destination="Mhk-dT-xVc" id="gAv-YP-FOY"/>
+                        <outlet property="textInputField" destination="lNM-VO-Nju" id="JLm-Ut-nlL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="114.50892857142857"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Temp1" width="263" height="943"/>
+    </resources>
 </document>

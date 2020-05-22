@@ -20,4 +20,9 @@
 }
 
 
+- (IBAction)switchConvert:(id)sender {
+}
+
+- (IBAction)convert:(id)sender {
+}
 @end

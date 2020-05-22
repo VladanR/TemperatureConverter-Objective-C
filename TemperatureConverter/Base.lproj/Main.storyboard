@@ -65,7 +65,7 @@
                                     <constraint firstAttribute="height" constant="34" id="9Zk-85-tUG"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                 <connections>
                                     <action selector="convert:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="qiK-Rb-V8c"/>
                                 </connections>

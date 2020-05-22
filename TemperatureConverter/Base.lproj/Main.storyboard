@@ -96,6 +96,8 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="enterLabel" destination="tOQ-7P-3vq" id="dqw-TB-knO"/>
+                        <outlet property="outputLabel" destination="Bfn-gW-A9G" id="piJ-XE-QDt"/>
                         <outlet property="switchConversion" destination="Hrt-KO-Azz" id="HBr-Tl-ScV"/>
                         <outlet property="temperatureImage" destination="Mhk-dT-xVc" id="gAv-YP-FOY"/>
                         <outlet property="textInputField" destination="lNM-VO-Nju" id="JLm-Ut-nlL"/>

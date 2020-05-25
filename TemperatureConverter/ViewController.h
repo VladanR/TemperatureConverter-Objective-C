@@ -9,6 +9,14 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UITextField *textInputField;
+@property (weak, nonatomic) IBOutlet UIImageView *temperatureImage;
+@property (weak, nonatomic) IBOutlet UILabel *enterLabel;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *switchConversion;
+@property (weak, nonatomic) IBOutlet UILabel *outputLabel;
+
+- (IBAction)convert:(id)sender;
+- (IBAction)switchConvert:(id)sender;
 
 
 @end
